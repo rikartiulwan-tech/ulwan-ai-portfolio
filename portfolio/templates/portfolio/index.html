@@ -1,0 +1,264 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ulwan AI Studio | AI Web & Booking Systems Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body class="antialiased">
+
+  <!-- Navbar -->
+  <nav class="bg-slate-950/85 backdrop-blur border-b border-slate-800 sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-xl font-extrabold tracking-tight text-white">
+        Ulwan AI Studio<span class="text-emerald-400"></span>
+      </a>
+      <div class="hidden md:flex items-center space-x-7 text-sm font-semibold text-slate-300">
+        <a href="#work" class="hover:text-emerald-400">Live Work</a>
+        <a href="#pricing" class="hover:text-emerald-400">Pricing</a>
+        <a href="#contact" class="hover:text-emerald-400">Start a Project</a>
+        <a href="/admin/" class="hover:text-emerald-400">Admin</a>
+      </div>
+      <div class="hidden md:block">
+        <a href="#contact" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-5 py-2.5 rounded-full text-sm transition">
+          Get a Quote ↗
+        </a>
+      </div>
+      <button onclick="toggleMenu()" class="md:hidden text-2xl text-white">☰</button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-slate-900 border-t border-slate-800 px-6 py-4 space-y-3 text-sm font-semibold">
+      <a href="#work" onclick="toggleMenu()" class="block">Live Work</a>
+      <a href="#pricing" onclick="toggleMenu()" class="block">Pricing</a>
+      <a href="#contact" onclick="toggleMenu()" class="block bg-emerald-500 text-slate-950 text-center py-2.5 rounded-xl font-bold">Start a Project</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-glow py-20 md:py-28 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <span class="inline-block bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">
+        AI Web & Automation Studio for Local Businesses
+      </span>
+      <h1 class="text-4xl md:text-6xl font-extrabold mt-6 leading-tight">
+        Websites That <span class="text-emerald-400">Answer Questions</span> & Book Clients 24/7.
+      </h1>
+      <p class="text-slate-400 mt-5 text-base md:text-lg max-w-2xl mx-auto">
+        We build custom, fast websites with built-in Gemini AI Receptionists, Auto-Booking Calendars, and Cloud Databases—delivered in 7 days.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="#work" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-7 py-3.5 rounded-full transition">
+          Explore Live Demos ↗
+        </a>
+        <a href="https://wa.me/919481469827" target="_blank" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-semibold px-7 py-3.5 rounded-full transition">
+          WhatsApp Directly 💬
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Live Portfolio Showcase -->
+  <section id="work" class="max-w-6xl mx-auto py-16 px-6">
+    <div class="text-center mb-12">
+      <span class="text-emerald-400 text-xs font-bold uppercase tracking-wider">Featured Case Studies</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold mt-2">Our Recent AI Websites</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Project 1: Lumiere Dental Care (LIVE!) -->
+      <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-center">
+            <span class="bg-emerald-500/20 text-emerald-300 text-xs font-bold px-3 py-1 rounded-full">● LIVE PRODUCTION</span>
+            <span class="text-xs text-slate-400">Healthcare • NYC</span>
+          </div>
+          <h3 class="text-2xl font-bold mt-4">Lumiere Dental Care</h3>
+          <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+            Full-stack luxury dental clinic platform with 4 specialist profiles, real-time slot locking (prevents double-booking), Payment Method selector, PostgreSQL DB, and "Emma" 24/7 AI Receptionist.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4 text-xs text-slate-300">
+            <span class="bg-slate-800 px-3 py-1 rounded-lg">Django</span>
+            <span class="bg-slate-800 px-3 py-1 rounded-lg">PostgreSQL</span>
+            <span class="bg-slate-800 px-3 py-1 rounded-lg">Gemini AI</span>
+            <span class="bg-slate-800 px-3 py-1 rounded-lg">Auto-Booking</span>
+          </div>
+        </div>
+        <a href="https://lumiere-dental-ai.onrender.com" target="_blank" class="mt-8 inline-block text-center bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-3 rounded-xl transition">
+          Open Live Website ↗
+        </a>
+      </div>
+
+      <!-- Project 2: IronPeak Fitness Studio -->
+      <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-center">
+            <span class="bg-blue-500/20 text-blue-300 text-xs font-bold px-3 py-1 rounded-full">MULTI-PAGE SYSTEM</span>
+            <span class="text-xs text-slate-400">Fitness & Gyms</span>
+          </div>
+          <h3 class="text-2xl font-bold mt-4">IronPeak Fitness Studio</h3>
+          <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+            Multi-page gym & personal training web app featuring Pro & Advance plans with an interactive Monthly/Annual toggle, live gym timings, WhatsApp integration, and an AI Fitness Coach.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4 text-xs text-slate-300">
+            <span class="bg-slate-800 px-3 py-1 rounded-lg">Multi-Page</span>
+            <span class="bg-slate-800 px-3 py-1 rounded-lg">MySQL</span>
+            <span class="bg-slate-800 px-3 py-1 rounded-lg">Subscription UI</span>
+            <span class="bg-slate-800 px-3 py-1 rounded-lg">AI Coach</span>
+          </div>
+        </div>
+        <a href="#contact" class="mt-8 inline-block text-center bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 rounded-xl transition">
+          Request Similar Build ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- USD Pricing Packages -->
+  <section id="pricing" class="max-w-6xl mx-auto py-16 px-6 border-t border-slate-800/80">
+    <div class="text-center mb-12">
+      <span class="text-emerald-400 text-xs font-bold uppercase tracking-wider">Transparent Pricing</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold mt-2">Packages for Your Business</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="glass-card p-7 rounded-3xl">
+        <h3 class="font-bold text-lg">Starter Site</h3>
+        <p class="text-3xl font-black mt-3">$399</p>
+        <p class="text-xs text-slate-400 mt-1">5-Day Delivery</p>
+        <ul class="mt-6 space-y-2.5 text-sm text-slate-300">
+          <li>✅ High-Converting Landing Page</li>
+          <li>✅ Mobile-First Responsive UI</li>
+          <li>✅ Lead Capture Form + Database</li>
+          <li>✅ Free Cloud Deployment</li>
+        </ul>
+      </div>
+
+      <div class="glass-card p-7 rounded-3xl border-emerald-500/60">
+        <span class="bg-emerald-500 text-slate-950 text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase">Most Popular</span>
+        <h3 class="font-bold text-lg mt-2">AI Growth Website</h3>
+        <p class="text-3xl font-black mt-3 text-emerald-400">$799</p>
+        <p class="text-xs text-slate-400 mt-1">7-Day Delivery</p>
+        <ul class="mt-6 space-y-2.5 text-sm text-slate-300">
+          <li>✅ Full Multi-Page Website</li>
+          <li>✅ 24/7 Custom AI Receptionist</li>
+          <li>✅ Auto-Booking (No Double Slots)</li>
+          <li>✅ Admin Dashboard + Payment Options</li>
+        </ul>
+      </div>
+
+      <div class="glass-card p-7 rounded-3xl">
+        <h3 class="font-bold text-lg">Custom Web App</h3>
+        <p class="text-3xl font-black mt-3">$1,499+</p>
+        <p class="text-xs text-slate-400 mt-1">14-Day Delivery</p>
+        <ul class="mt-6 space-y-2.5 text-sm text-slate-300">
+          <li>✅ Custom Client Portals & APIs</li>
+          <li>✅ Stripe / PayPal Checkout</li>
+          <li>✅ Automated Email / CRM Workflows</li>
+          <li>✅ 30 Days Priority Support</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Inquiry Form -->
+  <section id="contact" class="max-w-3xl mx-auto py-16 px-6">
+    <div class="glass-card p-8 md:p-10 rounded-3xl">
+      <h2 class="text-3xl font-extrabold text-center">Start Your Project</h2>
+      <p class="text-center text-slate-400 text-sm mt-1">Tell us about your business—we'll reply within 2 hours.</p>
+
+      <form id="inquiryForm" class="mt-8 space-y-4">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <input type="text" id="name" placeholder="Your Name" required class="w-full p-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white" />
+          <input type="email" id="email" placeholder="Work Email" required class="w-full p-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white" />
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <input type="text" id="business_type" placeholder="Business (e.g. Dental Clinic, Gym)" required class="w-full p-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white" />
+          <select id="package" class="w-full p-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white">
+            <option value="AI Growth ($799)">AI Growth ($799)</option>
+            <option value="Starter Site ($399)">Starter Site ($399)</option>
+            <option value="Custom Web App ($1,499+)">Custom Web App ($1,499+)</option>
+          </select>
+        </div>
+        <textarea id="details" rows="3" placeholder="What features do you need?" required class="w-full p-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white"></textarea>
+        <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-4 rounded-xl transition">
+          Send Project Inquiry ↗
+        </button>
+      </form>
+      <div id="inquiryStatus" class="mt-4 text-center text-sm font-semibold hidden"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-10 px-6 text-center text-sm text-slate-400">
+    <p class="font-bold text-white">Ulwan AI Studio • AI Web & Booking Studio</p>
+    <div class="flex justify-center gap-6 mt-3">
+      <a href="https://wa.me/919481469827" target="_blank" class="text-emerald-400 hover:underline">WhatsApp (+91 9481469827)</a>
+      <a href="https://instagram.com" target="_blank" class="hover:text-white">Instagram</a>
+      <a href="https://facebook.com" target="_blank" class="hover:text-white">Facebook</a>
+    </div>
+  </footer>
+
+  <!-- Floating AI Agency Consultant -->
+  <button onclick="toggleChat()" class="fixed bottom-5 right-5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-5 py-3 rounded-full shadow-2xl flex items-center gap-2 z-50">
+    <span>⚡</span> Ask AI Consultant
+  </button>
+
+  <div id="chatBox" class="hidden fixed bottom-20 right-5 w-[90vw] sm:w-96 bg-slate-900 text-white rounded-2xl shadow-2xl border border-slate-700 flex flex-col overflow-hidden z-50">
+    <div class="bg-slate-950 px-4 py-3 flex justify-between items-center border-b border-slate-800">
+      <div><p class="font-bold text-sm">Ulwan AI Studio AI Consultant</p><p class="text-[11px] text-emerald-400">● Online 24/7</p></div>
+      <button onclick="toggleChat()" class="text-slate-400 hover:text-white text-xl">&times;</button>
+    </div>
+    <div id="chatMessages" class="p-4 h-72 overflow-y-auto space-y-3 text-sm bg-slate-900">
+      <div class="bg-slate-800 text-slate-100 p-3 rounded-xl rounded-tl-none max-w-[85%]">Hi! Tell me about your business and I'll recommend the best website + AI package for you.</div>
+    </div>
+    <form id="chatForm" class="p-3 bg-slate-950 border-t border-slate-800 flex gap-2">
+      <input type="text" id="chatInput" placeholder="Ask about pricing, timeline..." required class="flex-1 px-3 py-2 text-sm bg-slate-800 text-white border border-slate-700 rounded-xl" />
+      <button type="submit" class="bg-emerald-500 text-slate-950 font-bold px-4 py-2 rounded-xl text-sm">➤</button>
+    </form>
+  </div>
+
+  <script>
+    function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('hidden'); }
+    function toggleChat() { document.getElementById('chatBox').classList.toggle('hidden'); }
+
+    document.getElementById('inquiryForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const status = document.getElementById('inquiryStatus');
+      const payload = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        business_type: document.getElementById('business_type').value,
+        package: document.getElementById('package').value,
+        details: document.getElementById('details').value
+      };
+      const res = await fetch('/api/inquiry/', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload)
+      });
+      const data = await res.json();
+      status.classList.remove('hidden', 'text-emerald-400', 'text-red-400');
+      status.classList.add(res.ok ? 'text-emerald-400' : 'text-red-400');
+      status.innerText = data.message;
+      if (res.ok) e.target.reset();
+    });
+
+    document.getElementById('chatForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const input = document.getElementById('chatInput');
+      const messages = document.getElementById('chatMessages');
+      const userText = input.value.trim();
+      if (!userText) return;
+      messages.innerHTML += `<div class="bg-emerald-500 text-slate-950 font-medium p-3 rounded-xl rounded-tr-none max-w-[85%] ml-auto">${userText}</div>`;
+      input.value = '';
+      messages.scrollTop = messages.scrollHeight;
+      const res = await fetch('/api/chat/', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message: userText })
+      });
+      const data = await res.json();
+      messages.innerHTML += `<div class="bg-slate-800 text-slate-100 p-3 rounded-xl rounded-tl-none max-w-[85%]">${data.reply}</div>`;
+      messages.scrollTop = messages.scrollHeight;
+    });
+  </script>
+</body>
+</html>
